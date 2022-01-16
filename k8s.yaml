@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rust-wasi-example
+  labels:
+    app: rust-wasi-example
+  annotations:
+    alpha.wasi.krustlet.dev/allowed-domains: '["https://catfact.ninja/fact"]'
+    alpha.wasi.krustlet.dev/max-concurrent-requests: "42"
+spec:
+  automountServiceAccountToken: false
+  containers:
+    - image: ghcr.io/deepu105/rust-wasm:latest
+      imagePullPolicy: Always
+      name: rust-wasi-example
+      env:
+        - name: RUST_LOG
+          value: info
+        - name: RUST_BACKTRACE
+          value: "1"
+  tolerations:
+    - key: "node.kubernetes.io/network-unavailable"
+      operator: "Exists"
+      effect: "NoSchedule"
+    - key: "kubernetes.io/arch"
+      operator: "Equal"
+      value: "wasm32-wasi"
+      effect: "NoExecute"
+    - key: "kubernetes.io/arch"
+      operator: "Equal"
+      value: "wasm32-wasi"
+      effect: "NoSchedule"

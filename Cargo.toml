@@ -1,0 +1,13 @@
+[package]
+name = "rust-wasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wasi-experimental-http = "0.7"
+http = "0.2.5"
+serde_json = "1.0.74"
+env_logger = "0.9"
+log = "0.4"
