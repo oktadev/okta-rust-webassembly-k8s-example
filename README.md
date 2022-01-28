@@ -11,7 +11,7 @@ You will use Krustlet to run a Wasm workload written in Rust on Kubernetes today
 - [kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) or another local kubernetes distribution
 - [Rust toolkit](https://www.rust-lang.org/learn/get-started) (Includes rustup, rustc, and cargo)
 
-Follow the blog post ["Containerless! Run WebAssembly Workloads written in Rust on Kubernetes"](https://developer.okta.com/blog/2022/01/13/webassembly-on-kubernetes-with-rust) for further instruction on setting up the cluster and running the workload.
+Follow the blog post ["Containerless! Run WebAssembly Workloads written in Rust on Kubernetes"](https://developer.okta.com/blog/2022/01/28/webassembly-on-kubernetes-with-rust) for further instruction on setting up the cluster and running the workload.
 
 # Build
 
